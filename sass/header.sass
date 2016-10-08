@@ -43,6 +43,16 @@ section
 		margin-top: 0
 		font-weight: normal
 
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+	box-shadow: $main 0 0 0 2px
+	border-color: $main
+
+body input:required:invalid,
+body textarea:required:invalid
+	color: green
+
 p strong
 	font-family: "RobotoBold", sans-serif
 	font-weight: normal
@@ -225,9 +235,46 @@ a.button
 .profi_item
 	color: $main
 .profi_left
-	margin-right: 20px
-	float: left
-.profi_left
 	i
 		+fz(100)
+		margin-top: -24px
 .profi_right
+	h3
+		margin: 0 0 0 15px
+		+fz(28)
+	p
+		margin: 5px 0 0 15px
+
+form
+	padding: 25px 30px
+	border: $accent 5px solid
+	border-radius: 5px
+	h2
+		text-transform: uppercase
+		margin-top: 0
+		font-family: "RobotoBold", sans-serif
+		+fz(22)
+		color: $txt-color
+		line-height: 22px
+	label
+		display: block
+		margin-bottom: 15px
+		color: #666
+		+fz(14)
+	input, select
+		display: block
+		line-height: 40px
+		height: 40px
+		margin-top: 3px
+		border: #d9d9d9 1px solid
+		box-shadow: 0 0 20px rgba(0, 0, 0, .06) inset
+		width: 100%
+		text-indent: 10px
+		+fz(19)
+		-webkit-inner-spin-button: opacity 1
+		&:focus
+			box-shadow: $accent 0 0 0 2px
+			border-radius: 3px
+			border-color: $accent
+	.button_wrap
+		text-align: center
