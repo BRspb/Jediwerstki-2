@@ -4,13 +4,14 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
-
+	.s_tizers .tiz_desc
+		display: block
+	.s_tizers	.row >div
+		text-align: center
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
-
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -53,6 +54,19 @@
 		h2
 			font-size: 28px
 
+	.tabs_header
+		.tabs
+			.tab
+				+fz(12)
+				white-space: nowrap
+				padding: 15px 4px
+				letter-spacing: 0
+
+	.button_wrap
+		text-align: center
+
+
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
@@ -85,3 +99,11 @@
 @media only screen and (min-width : 1200px)
 	/**/
 
+@media only screen and (min-height : 768px) and (min-width : 1400px)
+	.tabs_header
+		padding-top: 85px
+		>div
+			width: 100%
+			max-width: 700px
+	.top_header
+		margin-top: 150px
