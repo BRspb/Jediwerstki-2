@@ -1,5 +1,6 @@
 $(function() {
 
+<<<<<<< HEAD
 	$('.popup').magnificPopup({type:"image"});
 
 	$('.carousel').owlCarousel({
@@ -16,6 +17,8 @@ $(function() {
 	    }
 	})
 
+=======
+>>>>>>> a987ad504c7d0bdf77d664243927e38f30ec894f
 	function wResize() {
 		$("header").css("min-height", $(window).height());
 	};
