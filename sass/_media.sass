@@ -4,17 +4,43 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
-
+	.s_tizers .tiz_desc
+		display: block
+	.s_tizers	.row >div
+		text-align: center
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
-
+	form
+		margin: 40px 20px 0
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	
+	section
+		h2
+			margin-bottom: 40px
+	.top_phone, .logo, h1, .top_header h2
+		text-align: center
+	.logo
+		margin-bottom: 15px
+	.top-header
+		margin: 40px 0
+	.s_prof	
+		.profi_item
+			margin-bottom: 30px
+			text-align: center
+			&:last-child
+				margin-bottom: 45px
+			.profi_right
+				h3
+					+fz(25)
+					margin-left: 0
+				p
+					margin-left: 0
+			.profi_left
+				&:first-child
+					margin-top: -20px
+
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -36,15 +62,78 @@
 		-ms-animation: none !important
 		animation: none !important
 
-
+@media only screen and (max-width : 600px)
+	section
+		h2
+			margin-bottom: 35px
+	.profi_item
+		width: 100%
+		text-align: center
+		.profi_left
+			i
+				margin-bottom: -15px
+				margin-top: 0
+	.s_review
+		.owl-nav
+			bottom: 280px
+			.owl-next, .owl-prev 
+				background-size: 45px auto
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	header
+		padding-top: 20px
+	section
+		h2
+			+fz(38)
+			line-height: 42px
+	.top_header
+		margin-top: 20px
+		h1
+			font-size: 50px
+			line-height: 50px
+		h2
+			+fz(28)
+		h3
+			+fz(24)
+		.profi_item
+			margin-bottom: 40px
+	.s_review
+		h2
+			+fz(32)
+			line-height: 30px
+			margin-bottom: 15px
+	.tabs_header
+		.tabs
+			.tab
+				+fz(12)
+				white-space: nowrap
+				padding: 15px 4px
+				letter-spacing: 0
+
+	.button_wrap
+		text-align: center
+
+	form
+		h2
+			+fz(24)
+			margin-bottom: 10px
+		input, select
+			height: 30px
+			line-height: 30px
+
+
 
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	/**/
+	form
+		margin: 0
+		h2
+			+fz(18)
+	.s_back
+		h3
+			+fz(22)
+
 
 
 /*==========  Mobile First Method  ==========*/
@@ -73,3 +162,11 @@
 @media only screen and (min-width : 1200px)
 	/**/
 
+@media only screen and (min-height : 768px) and (min-width : 1400px)
+	.tabs_header
+		padding-top: 85px
+		>div
+			width: 100%
+			max-width: 700px
+	.top_header
+		margin-top: 150px

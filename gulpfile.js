@@ -1,13 +1,13 @@
 var gulp         = require('gulp'),
 		sass         = require('gulp-sass'),
 		autoprefixer = require('gulp-autoprefixer'),
-		cleanCSS    = require('gulp-clean-css'),
+		cleanCSS     = require('gulp-clean-css'),
 		rename       = require('gulp-rename'),
 		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
 		uglify       = require('gulp-uglify');
 
-gulp.task('browser-sync', ['styles', 'scripts'], function() {
+gulp.task('browser-sync', ['c', 'scripts'], function() {
 		browserSync.init({
 				server: {
 						baseDir: "./app"
@@ -16,7 +16,7 @@ gulp.task('browser-sync', ['styles', 'scripts'], function() {
 		});
 });
 
-gulp.task('styles', function () {
+gulp.task('c', function () {
 	return gulp.src('sass/*.sass')
 	.pipe(sass({
 		includePaths: require('node-bourbon').includePaths
@@ -34,6 +34,13 @@ gulp.task('scripts', function() {
 		'./app/libs/jquery/jquery-1.11.2.min.js',
 		'./app/libs/waypoints/waypoints.min.js',
 		'./app/libs/animate/animate-css.js',
+		'./app/libs/plugins-scroll/plugins-scroll.js',
+		'./app/libs/superfish/dist/js/superfish.min.js',
+		'./app/libs/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js',
+		'./app/libs/equalHeights/equalheights.js',
+		'./app/libs/magnific-popup/jquery.magnific-popup.min.js',
+		'./app/libs/stellar/jquery.stellar.min.js',
+		'./app/libs/owl.carousel/owl.carousel.min.js'
 		])
 		.pipe(concat('libs.js'))
 		// .pipe(uglify()) //Minify libs.js
@@ -41,7 +48,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('watch', function () {
-	gulp.watch('sass/*.sass', ['styles']);
+	gulp.watch('sass/*.sass', ['c']);
 	gulp.watch('app/libs/**/*.js', ['scripts']);
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
 	gulp.watch('app/*.html').on('change', browserSync.reload);
