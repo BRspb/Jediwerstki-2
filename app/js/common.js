@@ -69,3 +69,7 @@ $(function() {
 	});
 
 });
+
+$(window).load(function() {
+	$(".top_header").animated("fadeInDown", "fadeInDown");
+});
