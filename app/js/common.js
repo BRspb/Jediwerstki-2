@@ -16,13 +16,13 @@ $(function() {
 	    }
 	})
 
-	function wResize() {
-		$("header").css("min-height", $(window).height());
-	};
-	wResize();
-	$(window).resize(function() {
-		wResize()
-	});
+	// function wResize() {
+	// 	$("header").css("min-height", $(window).height());
+	// };
+	// wResize();
+	// $(window).resize(function() {
+	// 	wResize()
+	// });
 
 	$(".top_phone .wrapper .tab").click(function() {
 		$(".top_phone .wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
@@ -67,9 +67,20 @@ $(function() {
 		});
 		return false;
 	});
+	
+	$('.top_header').addClass('animated fadeInLeft');
+	$('.tabs_header').addClass('animated fadeInRight');
+	$('.s_tizers .col-md-3.col-sm-6').animated("fadeInLeft");
+	$('.profi_item').animated("zoomIn");
+	$('.s_review, .s_back, .s_contacts, footer').animated("fadeInUp");
+	
+	$(".s_prof").waypoint(function() {
+		$("form").each(function(index) {
+			var ths = $(this);
+			setInterval(function() {
+				ths.addClass('animated slideInRight on');
+			}, 400*index);
+		});
+	})
 
-});
-
-$(window).load(function() {
-	$(".top_header").animated("fadeInDown", "fadeInDown");
 });
